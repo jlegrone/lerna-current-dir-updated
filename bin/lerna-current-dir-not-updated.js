@@ -4,5 +4,5 @@ var lernaCurrentDirUpdated = require('../lib/index');
 
 lernaCurrentDirUpdated({
   arguments: process.argv.slice(2),
-  exitIfUpdated: false
+  exitIfUpdated: true
 });

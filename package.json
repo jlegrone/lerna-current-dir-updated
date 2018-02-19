@@ -15,7 +15,8 @@
     "prepare": "npm run build"
   },
   "bin": {
-    "lerna-current-dir-updated": "bin/lerna-current-dir-updated.js"
+    "lerna-current-dir-updated": "bin/lerna-current-dir-updated.js",
+    "lerna-current-dir-not-updated": "bin/lerna-current-dir-not-updated.js"
   },
   "dependencies": {
     "read-pkg-up": "^3.0.0"

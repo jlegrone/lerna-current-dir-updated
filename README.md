@@ -12,16 +12,15 @@ This can be especially useful when you wish to naively determine whether to run 
 $ npm install --global lerna-current-dir-updated
 ```
 
-**Note**: [lerna](https://lernajs.io) must already be in your path (installed globally) in order for `lerna-current-dir-updated` to work.
+**Note**: [lerna](https://lernajs.io) must already be in your path (installed globally) in order for this package to work.
 
 ## Usage
 
-```bash
-$ cd packages/my-package-name
-$ lerna-current-dir-updated --since master && npm test
-my-package-name is updated.
-... # npm test output
-```
+`lerna-current-dir-updated` and `lerna-current-dir-not-updated` accept the same flags as the [lerna updated](https://github.com/lerna/lerna#updated) command.
+
+### `lerna-current-dir-updated`
+
+Exits non-zero if the current directory *has not* been updated.
 
 ```bash
 $ cd packages/my-package-name
@@ -29,4 +28,15 @@ $ lerna-current-dir-updated --since develop && npm test
 my-package-name is not updated.
 ```
 
-`lerna-current-dir-updated` accepts the same flags as the [lerna updated](https://github.com/lerna/lerna#updated) command.
+### `lerna-current-dir-not-updated`
+
+Exits non-zero if the current directory *has* been updated.
+
+This command can be chained with another using an OR operator in order to avoid exiting non-zero in CI environments. In the below example tests are only run if the package has been updated, and nothing will show as a failure in CI unless `npm test` fails to pass.
+
+```bash
+$ cd packages/my-package-name
+$ lerna-current-dir-not-updated --since master || npm test
+my-package-name is updated.
+... # npm test output
+```
