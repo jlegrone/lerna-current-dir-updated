@@ -16,7 +16,7 @@ $ npm install --global lerna-current-dir-updated
 
 ## Usage
 
-`lerna-current-dir-updated` and `lerna-current-dir-not-updated` accept the same flags as the [lerna updated](https://github.com/lerna/lerna#updated) command.
+`lerna-current-dir-updated` and `lerna-current-dir-not-updated` accept the same flags as the [lerna list](https://github.com/lerna/lerna/tree/master/commands/list) command.
 
 ### `lerna-current-dir-updated`
 
