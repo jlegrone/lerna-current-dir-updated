@@ -1,6 +1,6 @@
 {
   "name": "lerna-current-dir-updated",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Check whether the current working directory is part of a lerna package that has been updated.",
   "main": "lib/index.js",
   "repository": "https://github.com/jlegrone/lerna-current-dir-updated",
